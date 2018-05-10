@@ -1,4 +1,9 @@
-# enterprise-ng QuickStart Guide
+# 'enterprise-ng' QuickStart Guide
+
+:warning: NOTE: this guide is currently linked to version 4.6.0 of the enterprise controls. :warning:
+
+You can use the 4.6.0 controls, but you will need to install the `rxjs-compat` package, and make some changes to the @infor\sohoxi-angular package.
+:construction:
 
 This quickstart guide demonstrates how to build and run a simple Angular application using the **enterprise-ng** components (**@infor/sohoxi-angular**).
 
@@ -45,12 +50,10 @@ You can add the dependencies directly into the `project.json` file, however it i
 In a terminal window, in the project folder:
 
 1. Type `npm install jquery@3.1.1 -S`
-2. Type `npm install idl-enterprise@4.7.0 -S`
-3. Type `npm install idl-enterprise-ng@4.7.0 -S`
+2. Type `npm install @infor/sohoxi@4.6.0 -S`
+3. Type `npm install @infor/sohoxi-angular@4.6.0 -S`
 4. Type `npm install @types/jquery@3.2.16 -D`
 5. Type `npm install merge-stream -D`
-
-(You can use the 4.6.0 controls, but you will need to install the `rxjs-compat` package.)
 
 This includes all the packages we need to create this simple quickstart application.
 
