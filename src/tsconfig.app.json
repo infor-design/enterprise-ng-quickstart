@@ -3,7 +3,11 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "types": []
+    "types": [
+      "jasmine",
+      "jquery",
+      "node"
+    ]
   },
   "exclude": [
     "src/test.ts",
