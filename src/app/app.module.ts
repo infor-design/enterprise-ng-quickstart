@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { SohoComponentsModule } from '@infor/sohoxi-angular';
+import { SohoComponentsModule } from 'ids-enterprise-ng';
 
 import { AppComponent } from './app.component';
 
