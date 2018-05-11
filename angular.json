@@ -21,8 +21,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "./node_modules/ids-enterprise/sohoxi/dist/css",
-                "output": "/assets/sohoxi/css"
+                "input": "./node_modules/ids-enterprise/dist/css",
+                "output": "./assets/ids-enterprise/css"
               },
               "src/favicon.ico"
             ],
