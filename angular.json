@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "enterprise-ng-quickstart": {
+    "ids-enterprise-ng-quickstart": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/enterprise-ng-quickstart",
+            "outputPath": "dist/ids-enterprise-ng-quickstart",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -21,20 +21,19 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "node_modules/@infor/sohoxi/dist/css",
+                "input": "./node_modules/ids-enterprise/sohoxi/dist/css",
                 "output": "/assets/sohoxi/css"
               },
-              "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/@infor/sohoxi/dist/js/sohoxi.js",
-              "./node_modules/@infor/sohoxi/dist/js/cultures/en-US.js",
-              "./node_modules/@infor/sohoxi/dist/js/d3.v4.js"
+              "./node_modules/ids-enterprise/dist/js/sohoxi.js",
+              "./node_modules/ids-enterprise/dist/js/cultures/en-US.js",
+              "./node_modules/ids-enterprise/dist/js/d3.v4.js"
             ]
           },
           "configurations": {
@@ -60,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "enterprise-ng-quickstart:build"
+            "browserTarget": "ids-enterprise-ng-quickstart:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "enterprise-ng-quickstart:build:production"
+              "browserTarget": "ids-enterprise-ng-quickstart:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "enterprise-ng-quickstart:build"
+            "browserTarget": "ids-enterprise-ng-quickstart:build"
           }
         },
         "test": {
@@ -86,9 +85,9 @@
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/@infor/sohoxi/dist/js/sohoxi.js",
-              "./node_modules/@infor/sohoxi/dist/js/cultures/en-US.js",
-              "./node_modules/@infor/sohoxi/dist/js/d3.v4.js"
+              "./node_modules/ids-enterprise/dist/js/sohoxi.js",
+              "./node_modules/ids-enterprise/dist/js/cultures/en-US.js",
+              "./node_modules/ids-enterprise/dist/js/d3.v4.js"
             ],
             "assets": [
               "src/favicon.ico",
@@ -110,7 +109,7 @@
         }
       }
     },
-    "enterprise-ng-quickstart-e2e": {
+    "ids-enterprise-ng-quickstart-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -118,7 +117,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "enterprise-ng-quickstart:serve"
+            "devServerTarget": "ids-enterprise-ng-quickstart:serve"
           }
         },
         "lint": {
@@ -133,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "enterprise-ng-quickstart"
+  "defaultProject": "ids-enterprise-ng-quickstart"
 }

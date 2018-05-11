@@ -19,7 +19,7 @@
   },
   "include": [
        "src/**/*",
-       "./node_modules/@infor/sohoxi-angular/**/*"
+       "./node_modules/ids-enterprise-ng/**/*"
     ]
 
 }

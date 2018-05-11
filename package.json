@@ -1,5 +1,5 @@
 {
-  "name": "enterprise-ng-quickstart",
+  "name": "ids-enterprise-ng-quickstart",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,11 +20,10 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
-    "@infor/sohoxi": "^4.6.0",
-    "@infor/sohoxi-angular": "^4.6.0",
+    "ids-enterprise": "^4.6.0-alpha.4",
+    "ids-enterprise-ng": "^4.7.0-alpha.1",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
-    "idl-enterprise": "0.0.0",
     "jquery": "^3.1.1",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.1.0",
