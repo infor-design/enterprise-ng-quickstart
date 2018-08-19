@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'ids-enterprise-ng-quickstart';
+
+  constructor() {
+    Soho.Locale.culturesPath = '/assets/ids-enterprise/js/cultures/';
+    Soho.Locale.set('en-US').done(() => {
+      console.log('Locale set');
+    });
+  }
 
   public clicked() {
     alert('Clicked me!');

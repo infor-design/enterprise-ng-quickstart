@@ -2,15 +2,16 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "module": "es2015",
     "types": [
-      "jasmine",
-      "jquery",
-      "node"
+      "jquery"
     ]
   },
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"
+  ],
+  "include": [
+    "**/*",
+    "../node_modules/ids-enterprise-ng/**/*"
   ]
 }
