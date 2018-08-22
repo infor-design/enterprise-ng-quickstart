@@ -24,12 +24,12 @@
               "src/assets",
               {
               "glob": "**/*",
-              "input": "node_modules/ids-enterprise/dist/css",
+              "input": "node_modules/ids-enterprise-ng/node_modules/ids-enterprise/dist/css",
               "output": "/assets/ids-enterprise/css"
               },
               {
               "glob": "**/*",
-              "input": "node_modules/ids-enterprise/dist/js/cultures",
+              "input": "node_modules/ids-enterprise-ng/node_modules/ids-enterprise/dist/js/cultures",
               "output": "/assets/ids-enterprise/js/cultures"
               }
             ],
@@ -37,9 +37,9 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/ids-enterprise/dist/js/d3.v4.js",
-              "./node_modules/ids-enterprise/dist/js/sohoxi.js"
+              "./node_modules/ids-enterprise-ng/node_modules/jquery/dist/jquery.js",
+              "./node_modules/ids-enterprise-ng/node_modules/ids-enterprise/dist/js/d3.v4.js",
+              "./node_modules/ids-enterprise-ng/node_modules/ids-enterprise/dist/js/sohoxi.js"
             ]
           },
           "configurations": {
@@ -82,6 +82,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "preserveSymlinks": true,
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
@@ -90,22 +91,22 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/ids-enterprise/dist/js/d3.v4.js",
-              "./node_modules/ids-enterprise/dist/js/sohoxi.js"
+              "./node_modules/ids-enterprise-ng/node_modules/jquery/dist/jquery.js",
+              "./node_modules/ids-enterprise-ng/node_modules/ids-enterprise/dist/js/d3.v4.js",
+              "./node_modules/ids-enterprise-ng/node_modules/ids-enterprise/dist/js/sohoxi.js"
             ],
             "assets": [
               "src/favicon.ico",
               "src/assets",
               {
-              "glob": "**/*",
-              "input": "node_modules/ids-enterprise/dist/css",
-              "output": "/assets/ids-enterprise/css"
+                "glob": "**/*",
+                "input": "node_modules/ids-enterprise-ng/node_modules/ids-enterprise/dist/css",
+                "output": "/assets/ids-enterprise/css"
               },
               {
-              "glob": "**/*",
-              "input": "node_modules/ids-enterprise/dist/js/cultures",
-              "output": "/assets/ids-enterprise/js/cultures"
+                "glob": "**/*",
+                "input": "node_modules/ids-enterprise-ng/node_modules/ids-enterprise/dist/js/cultures",
+                "output": "/assets/ids-enterprise/js/cultures"
               }
             ]
           }
