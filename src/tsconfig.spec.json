@@ -14,8 +14,6 @@
   ],
   "include": [
     "**/*.spec.ts",
-    "**/*.d.ts",
-    "**/*",
-    "../node_modules/ids-enterprise-ng/**/*"
+    "**/*.d.ts"
   ]
 }
