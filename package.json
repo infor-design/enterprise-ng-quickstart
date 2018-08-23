@@ -22,7 +22,7 @@
     "@angular/router": "^6.1.3",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
-    "ids-enterprise-ng": "^4.10.0-dev",
+    "ids-enterprise-ng": "^4.10.0-alpha.6",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

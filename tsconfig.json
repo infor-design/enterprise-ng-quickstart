@@ -11,8 +11,7 @@
     "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": [
-      "node_modules/@types",
-      "node_modules/ids-enterprise-ng/node_modules/@types",
+      "node_modules/@types"
     ],
     "lib": [
       "es2017",
