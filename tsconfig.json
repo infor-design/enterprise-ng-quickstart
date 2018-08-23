@@ -5,6 +5,7 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
+    "module": "es2015",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -16,10 +17,5 @@
       "es2017",
       "dom"
     ]
-  },
-  "include": [
-       "src/**/*",
-       "./node_modules/ids-enterprise-ng/**/*"
-    ]
-
+  }
 }
