@@ -1,6 +1,13 @@
-# EnterpriseNgQuickstart
+# IdsEnterpriseNgQuickstart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+
+## Installing
+
+1. Clone the repository with `git clone https://github.com/infor-design/enterprise-ng-quickstart.git`
+2. Change into the new directory by running the command `cd enterprise-ng-quickstart`
+3. Install all of the package dependencies by running `npm install`
+4. To run the development server or any additional commands withing the quickstart project, follow the instructions below
 
 ## Development server
 
