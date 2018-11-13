@@ -23,7 +23,7 @@
     "@types/jquery": "^3.3.21",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
-    "ids-enterprise-ng": "4.13.0-dev.20181026",
+    "ids-enterprise-ng": "5.0.0-dev.20181113",
     "rxjs": "^6.3.3",
     "zone.js": "~0.8.26"
   },
