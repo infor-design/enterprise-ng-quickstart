@@ -37,9 +37,9 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/ids-enterprise/dist/js/d3.v4.js",
-              "./node_modules/ids-enterprise/dist/js/sohoxi.js"
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/d3/build/d3.js",
+              "node_modules/ids-enterprise/dist/js/sohoxi.js"
             ]
           },
           "configurations": {
@@ -58,7 +58,14 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
@@ -91,9 +98,9 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/ids-enterprise/dist/js/d3.v4.js",
-              "./node_modules/ids-enterprise/dist/js/sohoxi.js"
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/d3/build/d3.js",
+              "node_modules/ids-enterprise/dist/js/sohoxi.js"
             ],
             "assets": [
               "src/favicon.ico",
