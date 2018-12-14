@@ -19,7 +19,6 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
-    "@types/jquery": "^3.3.24",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
     "ids-enterprise-ng": "5.0.0",
