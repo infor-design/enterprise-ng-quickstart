@@ -9,10 +9,6 @@ export class AppComponent {
   title = 'ids-enterprise-ng-quickstart';
 
   constructor() {
-    Soho.Locale.culturesPath = '/assets/ids-enterprise/js/cultures/';
-    Soho.Locale.set('en-US').done(() => {
-      console.log('Locale set');
-    });
   }
 
   public clicked() {

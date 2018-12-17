@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { SohoComponentsModule } from 'ids-enterprise-ng';
 
 import { AppComponent } from './app.component';
+import { SohoLocaleInitializerModule } from './locale/soho-locale-initializer.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    SohoComponentsModule
+    SohoComponentsModule,
+    SohoLocaleInitializerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
