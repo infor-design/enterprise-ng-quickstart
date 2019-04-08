@@ -38,10 +38,7 @@ export class SohoLocaleInitializerService {
     // Wait for the locales to be loaded before starting the
     // application.
     await Soho.Locale.set(this.locale).done(() => {
-      // This is a good place to load any additional translations to
-      // augment those provided by the enterprise controls.
-
-      const base = Soho.Locale.cultures[this.locale];
+      const currentLanguageName = Soho.Locale.currentLanguage.name;
 
       // This is an example of extending the resources provided by
       // the enterprise controls, and made available to the sohoTranslate
@@ -54,10 +51,8 @@ export class SohoLocaleInitializerService {
         comment: ''
       };
 
-      // ... once loaded (async if required), merge the translations into the core set.
-      Soho.Locale.cultures[this.locale] = extend(true, {}, base, {
-        messages: translations
-      });
+      // @todo remove cast to any when the new methods have been added to the soho-locale.d.ts file.
+      Soho.Locale.extendTranslations(currentLanguageName, translations);
 
       console.log('Enterprise Locale Initialised.');
     });
