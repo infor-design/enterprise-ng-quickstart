@@ -9,6 +9,8 @@ export class AppComponent {
   title = 'ids-enterprise-ng-quickstart';
 
   constructor() {
+    // Set the Locale for the app
+    Soho.Locale.set('en-US');
   }
 
   public clicked() {
