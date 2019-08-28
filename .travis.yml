@@ -1,4 +1,4 @@
-language:
+language: node_js
 # Leave node_js version blank to
 # use version in `.nvmrc`
 addons:
