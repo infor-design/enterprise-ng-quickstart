@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.7",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
-    "ids-enterprise-ng": "^6.0.0,
+    "ids-enterprise-ng": "^6.0.0",
     "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -43,6 +43,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "~5.4.0",
+    "tar": ">=2.2.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.5.3"
