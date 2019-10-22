@@ -1,6 +1,6 @@
 {
   "name": "ids-enterprise-ng-quickstart",
-  "version": "6.0.0",
+  "version": "6.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.7",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
-    "ids-enterprise-ng": "^6.0.0",
+    "ids-enterprise-ng": "^6.1.1",
     "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
