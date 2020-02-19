@@ -45,11 +45,11 @@ export class SohoLocaleInitializerService {
       // pipe.  These can be loaded explicitly, or via an http
       // call to the backend.
       const translations: Translation[] = []; // <-- set this to the additional translations
-      translations['QuickStartButtonText'] = {
+      translations.push({
         id: 'QuickStartButtonText',
         value: 'Click Me!',
         comment: ''
-      };
+      });
 
       Soho.Locale.extendTranslations(currentLanguageName, translations);
 
