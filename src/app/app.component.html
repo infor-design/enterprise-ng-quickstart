@@ -1,7 +1,4 @@
-<soho-icons-ext></soho-icons-ext>
-
 <soho-icons></soho-icons>
-<soho-icons-uplift></soho-icons-uplift>
 
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
@@ -9,9 +6,9 @@
     Welcome to {{ title }}!
   </h1>
 
-  <button soho-button (click)="clicked()">{{'QuickStartButtonText' | sohoTranslate }}</button>
+  <button soho-button (click)="clicked()">{{'Alert' | sohoTranslate }}</button>
   <div class="field">
     <label for="current-date" class="label">Current Date</label>
-    <input soho-datepicker name="current-date" />
+    <input soho-datepicker id="current-date" />
   </div>
 </div>

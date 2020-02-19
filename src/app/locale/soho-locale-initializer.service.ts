@@ -51,7 +51,6 @@ export class SohoLocaleInitializerService {
         comment: ''
       };
 
-      // @todo remove cast to any when the new methods have been added to the soho-locale.d.ts file.
       Soho.Locale.extendTranslations(currentLanguageName, translations);
 
       console.log('Enterprise Locale Initialised.');

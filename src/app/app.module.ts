@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
-import { SohoComponentsModule } from 'ids-enterprise-ng';
+import {SohoButtonModule, SohoComponentsModule, SohoLocaleModule} from 'ids-enterprise-ng';
 
 import { AppComponent } from './app.component';
 import { SohoLocaleInitializerModule } from './locale/soho-locale-initializer.module';
@@ -10,12 +10,19 @@ import { SohoLocaleInitializerModule } from './locale/soho-locale-initializer.mo
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    SohoComponentsModule,
-    SohoLocaleInitializerModule
+    imports: [
+        BrowserModule,
+        SohoLocaleModule,
+        SohoButtonModule,
+        SohoLocaleInitializerModule,
+        SohoComponentsModule
+    ],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'ar-EG'
+    }
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
