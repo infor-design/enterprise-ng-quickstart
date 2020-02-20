@@ -4,11 +4,11 @@
   "newProjectRoot": "projects",
   "projects": {
     "ids-enterprise-ng-quickstart": {
+      "projectType": "application",
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "projectType": "application",
       "prefix": "app",
-      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -17,29 +17,29 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "preserveSymlinks": true,
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
               {
-              "glob": "**/*",
-              "input": "node_modules/ids-enterprise/dist/css",
-              "output": "/assets/ids-enterprise/css"
+                "glob": "**/*",
+                "input": "./node_modules/ids-enterprise/dist/css",
+                "output": "/assets/ids-enterprise/css"
               },
               {
-              "glob": "**/*",
-              "input": "node_modules/ids-enterprise/dist/js/cultures",
-              "output": "/assets/ids-enterprise/js/cultures"
+                "glob": "**/*",
+                "input": "./node_modules/ids-enterprise/dist/js/cultures",
+                "output": "/assets/ids-enterprise/js/cultures"
               }
             ],
             "styles": [
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/d3/build/d3.js",
-              "node_modules/ids-enterprise/dist/js/sohoxi.js"
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/d3/build/d3.js",
+              "./node_modules/ids-enterprise/dist/js/sohoxi.js"
             ]
           },
           "configurations": {
@@ -55,7 +55,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -64,6 +63,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -92,29 +96,29 @@
             "preserveSymlinks": true,
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/d3/build/d3.js",
-              "node_modules/ids-enterprise/dist/js/sohoxi.js"
-            ],
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "node_modules/ids-enterprise/dist/css",
+                "input": "./node_modules/ids-enterprise/dist/css",
                 "output": "/assets/ids-enterprise/css"
               },
               {
                 "glob": "**/*",
-                "input": "node_modules/ids-enterprise/dist/js/cultures",
+                "input": "./node_modules/ids-enterprise/dist/js/cultures",
                 "output": "/assets/ids-enterprise/js/cultures"
               }
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/d3/build/d3.js",
+              "./node_modules/ids-enterprise/dist/js/sohoxi.js"
             ]
           }
         },
@@ -122,20 +126,15 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
-        }
-      }
-    },
-    "ids-enterprise-ng-quickstart-e2e": {
-      "root": "e2e/",
-      "projectType": "application",
-      "architect": {
+        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -147,18 +146,12 @@
               "devServerTarget": "ids-enterprise-ng-quickstart:serve:production"
             }
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     }
   },
-  "defaultProject": "ids-enterprise-ng-quickstart"
+  "defaultProject": "ids-enterprise-ng-quickstart",
+  "cli": {
+    "analytics": "fb234f71-2f18-4d9a-a82d-1e9f0d12493d"
+  }
 }

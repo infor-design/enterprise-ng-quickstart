@@ -10,7 +10,7 @@ export class AppComponent {
 
   constructor() {
     // Set the Locale for the app
-    Soho.Locale.set('en-US');
+    // Soho.Locale.set('en-US');
   }
 
   public clicked() {
