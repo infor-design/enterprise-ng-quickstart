@@ -1,5 +1,4 @@
 import { LOCALE_ID, Inject, Injectable } from '@angular/core';
-import { extend } from 'jquery';
 import { APP_BASE_HREF } from '@angular/common';
 
 export interface Translation {
