@@ -20,7 +20,7 @@ import { SohoLocaleInitializerModule } from './locale/soho-locale-initializer.mo
   providers: [
     {
       provide: LOCALE_ID,
-      useValue: 'ar-EG'
+      useValue: 'en-US'
     }
   ],
   bootstrap: [AppComponent]
