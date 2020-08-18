@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import {SohoButtonModule, SohoComponentsModule, SohoLocaleModule} from 'ids-enterprise-ng';
 
@@ -14,19 +14,20 @@ import { PersonalizeMenuComponent } from './personalize-menu/personalize-menu.co
     HeaderComponent,
     PersonalizeMenuComponent
   ],
-    imports: [
-        BrowserModule,
-        SohoLocaleModule,
-        SohoButtonModule,
-        SohoLocaleInitializerModule,
-        SohoComponentsModule
-    ],
+  imports: [
+      BrowserModule,
+      SohoLocaleModule,
+      SohoButtonModule,
+      SohoLocaleInitializerModule,
+      SohoComponentsModule
+  ],
   providers: [
     {
       provide: LOCALE_ID,
       useValue: 'en-US'
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
