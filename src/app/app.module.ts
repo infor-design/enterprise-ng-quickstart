@@ -5,10 +5,14 @@ import {SohoButtonModule, SohoComponentsModule, SohoLocaleModule} from 'ids-ente
 
 import { AppComponent } from './app.component';
 import { SohoLocaleInitializerModule } from './locale/soho-locale-initializer.module';
+import { HeaderComponent } from './header/header.component';
+import { PersonalizeMenuComponent } from './personalize-menu/personalize-menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    PersonalizeMenuComponent
   ],
     imports: [
         BrowserModule,
