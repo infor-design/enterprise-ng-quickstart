@@ -19,6 +19,7 @@ import {
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewInit {
+
   /**
    * Local Storage Key
    */
@@ -36,7 +37,7 @@ export class AppComponent implements AfterViewInit {
    * is not quite perfect, as we need to listen for the theme change here.
    * Maybe wrap all the icons into their own component?
    */
-  public useUpliftIcons = false;
+  public useUpliftIcons = true;
 
   public personalizeOptions: SohoPersonalizeOptions = {};
 
