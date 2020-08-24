@@ -14,6 +14,9 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "types": [
+      "ids-enterprise-typings"
+    ],
     "lib": [
       "es2018",
       "dom"
