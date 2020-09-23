@@ -21,6 +21,7 @@
     "@angular/router": "~10.0.11",
     "classlist.js": "^1.1.20150312",
     "ids-enterprise-ng": "^7.2.4",
+    "ids-enterprise-typings": "^7.7.0-dev.20200923",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
