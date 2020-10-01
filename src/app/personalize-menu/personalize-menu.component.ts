@@ -105,7 +105,7 @@ export class PersonalizeMenuComponent implements OnInit {
     const themeId = ev.data.theme;
     this.theme = themeId;
     this.setSelectedTheme(themeId);
-    console.log('onChangeTheme', ev)
+    console.log('onChangeTheme', ev);
   }
 
   /**
