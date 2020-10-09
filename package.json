@@ -1,6 +1,7 @@
 {
   "name": "ids-enterprise-ng-quickstart",
   "version": "8.0.0",
+  "author": "Infor Design",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
