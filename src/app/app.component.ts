@@ -26,7 +26,7 @@ export class AppComponent implements AfterViewInit {
   private static IS_APPLICATION_MENU_OPEN_KEY = 'is-application-menu-open';
 
   @ViewChild(SohoApplicationMenuComponent, { static: true })
-  public applicationMenu?: SohoApplicationMenuComponent;
+  public applicationMenu!: SohoApplicationMenuComponent;
 
   @ViewChild(SohoPersonalizeDirective, { static: true }) personalize?: SohoPersonalizeDirective;
 
@@ -57,9 +57,9 @@ export class AppComponent implements AfterViewInit {
      * this.applicationMenu.triggers = [ '.application-menu-trigger' ];
      */
     if (this.isApplicationMenuOpen) {
-      (this.applicationMenu as any).openMenu(true, true);
+      this.applicationMenu.openMenu(true, true);
     } else {
-      (this.applicationMenu as any).closeMenu();
+      this.applicationMenu.closeMenu();
     }
   }
 
