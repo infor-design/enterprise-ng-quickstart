@@ -26,9 +26,9 @@ export class AppComponent implements AfterViewInit {
   private static IS_APPLICATION_MENU_OPEN_KEY = 'is-application-menu-open';
 
   @ViewChild(SohoApplicationMenuComponent, { static: true })
-  public applicationMenu: SohoApplicationMenuComponent;
+  public applicationMenu?: SohoApplicationMenuComponent;
 
-  @ViewChild(SohoPersonalizeDirective, { static: true }) personalize: SohoPersonalizeDirective;
+  @ViewChild(SohoPersonalizeDirective, { static: true }) personalize?: SohoPersonalizeDirective;
 
   @HostBinding('class.no-scroll') get isNoScroll() { return true; }
 
@@ -57,9 +57,9 @@ export class AppComponent implements AfterViewInit {
      * this.applicationMenu.triggers = [ '.application-menu-trigger' ];
      */
     if (this.isApplicationMenuOpen) {
-      this.applicationMenu.openMenu(true, true);
+      (this.applicationMenu as any).openMenu(true, true);
     } else {
-      this.applicationMenu.closeMenu();
+      (this.applicationMenu as any).closeMenu();
     }
   }
 
