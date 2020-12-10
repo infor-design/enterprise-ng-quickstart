@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~11.0.4",
     "@angular/router": "~11.0.4",
     "classlist.js": "^1.1.20150312",
-    "ids-enterprise-ng": "^9.0.0-dev.20201211",
+    "ids-enterprise-ng": "^9.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
