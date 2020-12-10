@@ -1,3 +1,4 @@
+/* eslint-disable prefer-arrow/prefer-arrow-functions */
 import { LOCALE_ID, Inject, Injectable } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 
@@ -57,6 +58,8 @@ export class SohoLocaleInitializerService {
   }
 }
 
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export function SohoLocaleInitializerFactory(service: SohoLocaleInitializerService) {
     return () => service.initialize();
 }

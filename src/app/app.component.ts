@@ -13,7 +13,7 @@ import {
 } from 'ids-enterprise-ng';
 
 @Component({
-  selector: 'body', // tslint:disable-line
+  selector: 'body', // eslint-disable-line
   templateUrl: 'app.component.html',
   styleUrls: [ './app.component.css' ],
   encapsulation: ViewEncapsulation.None
@@ -23,7 +23,7 @@ export class AppComponent implements AfterViewInit {
   /**
    * Local Storage Key
    */
-  private static IS_APPLICATION_MENU_OPEN_KEY = 'is-application-menu-open';
+  private static isMenuOpen = 'is-application-menu-open';
 
   @ViewChild(SohoApplicationMenuComponent, { static: true })
   public applicationMenu!: SohoApplicationMenuComponent;
@@ -64,12 +64,12 @@ export class AppComponent implements AfterViewInit {
   }
 
   public get isApplicationMenuOpen(): boolean {
-    const valueString = localStorage.getItem(AppComponent.IS_APPLICATION_MENU_OPEN_KEY);
+    const valueString = localStorage.getItem(AppComponent.isMenuOpen);
     return valueString ? (valueString === 'true') : true;
   }
 
   public set isApplicationMenuOpen(open: boolean) {
-    localStorage.setItem(AppComponent.IS_APPLICATION_MENU_OPEN_KEY, open ? 'true' : 'false');
+    localStorage.setItem(AppComponent.isMenuOpen, open ? 'true' : 'false');
   }
 
   onChangeTheme(ev: SohoPersonalizeEvent) {

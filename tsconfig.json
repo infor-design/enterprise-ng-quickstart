@@ -16,7 +16,10 @@
       "node_modules/@types"
     ],
     "types": [
-      "ids-enterprise-typings"
+      "ids-enterprise-typings",
+      "jasmine",
+      "jasminewd2",
+      "node"
     ],
     "lib": [
       "es2018",

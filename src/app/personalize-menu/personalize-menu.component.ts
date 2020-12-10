@@ -20,7 +20,6 @@ interface ColorMenuItem extends SohoPersonalizationColor {
 })
 export class PersonalizeMenuComponent implements OnInit {
   @ViewChild(SohoPersonalizeDirective, { static: true })
-  private personalize!: SohoPersonalizeDirective;
 
   /**
    * Mark as a popupmenu.
@@ -35,21 +34,23 @@ export class PersonalizeMenuComponent implements OnInit {
   public themeMenuItems!: ThemeMenuItem[];
   public colorMenuItems!: ColorMenuItem[];
 
+  private personalize!: SohoPersonalizeDirective;
+
   /**
    * Default Theme: this should really be based on the one selected in
    * the IDS Enterprise component code.
    */
-  private readonly DEFAULT_THEME = 'theme-soho-light';
+  private readonly defaultTheme = 'theme-soho-light';
 
   /**
    * Storage key for the theme.
    */
-  private readonly IDS_ENTERPRISE_THEME_KEY = 'ids_theme';
+  private readonly idsThemeKey = 'ids_theme';
 
   /**
    * Storage key for the color.
    */
-  private readonly IDS_ENTERPRISE_COLOR_KEY = 'ids_color';
+  private readonly idsColorKey = 'ids_color';
 
   /**
    * Initialize the component after Angular first displays the data-bound
@@ -96,6 +97,7 @@ export class PersonalizeMenuComponent implements OnInit {
 
   /**
    * Handle the theme change event, by setting it in local storage.
+   *
    * @todo may want to consider making the persistence of this
    * configurable, so we could use a state pattern.
    *
@@ -129,8 +131,8 @@ export class PersonalizeMenuComponent implements OnInit {
    * a sensible default theme if one is not yet set.
    */
   public get theme(): string {
-    const theme = localStorage.getItem(this.IDS_ENTERPRISE_THEME_KEY);
-    return theme ? theme : this.DEFAULT_THEME;
+    const theme = localStorage.getItem(this.idsThemeKey);
+    return theme ? theme : this.defaultTheme;
   }
 
   /**
@@ -139,7 +141,7 @@ export class PersonalizeMenuComponent implements OnInit {
    * @param themeName the theme name.
    */
   public set theme(themeName: string) {
-    localStorage.setItem(this.IDS_ENTERPRISE_THEME_KEY, themeName);
+    localStorage.setItem(this.idsThemeKey, themeName);
   }
 
   /**
@@ -147,7 +149,7 @@ export class PersonalizeMenuComponent implements OnInit {
    * a sensible default color if one is not yet set.
    */
   public get color(): string {
-    const color = localStorage.getItem(this.IDS_ENTERPRISE_COLOR_KEY);
+    const color = localStorage.getItem(this.idsColorKey);
     return color ? color : '';
   }
 
@@ -157,9 +159,9 @@ export class PersonalizeMenuComponent implements OnInit {
    */
   public set color(color: string) {
     if (color === '') {
-      localStorage.removeItem(this.IDS_ENTERPRISE_COLOR_KEY);
+      localStorage.removeItem(this.idsColorKey);
       return;
     }
-    localStorage.setItem(this.IDS_ENTERPRISE_COLOR_KEY, color);
+    localStorage.setItem(this.idsColorKey, color);
   }
 }

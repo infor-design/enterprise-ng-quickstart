@@ -16,6 +16,7 @@ import {
  * @param platformLocation an Angular service used to interact with a browser's URL
  * @return a string instance of the `<base href="" />` value from `index.html`
  */
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function getBaseHref(platformLocation: PlatformLocation): string {
   return platformLocation.getBaseHrefFromDOM();
 }
