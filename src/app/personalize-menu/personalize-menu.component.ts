@@ -19,7 +19,6 @@ interface ColorMenuItem extends SohoPersonalizationColor {
   templateUrl: 'personalize-menu.component.html'
 })
 export class PersonalizeMenuComponent implements OnInit {
-  
   /**
    * Mark as a popupmenu.
    */
@@ -30,11 +29,11 @@ export class PersonalizeMenuComponent implements OnInit {
    */
   @HostBinding('class.is-selectable') isSelectable = true;
 
-  public themeMenuItems!: ThemeMenuItem[];
-  public colorMenuItems!: ColorMenuItem[];
-
   @ViewChild(SohoPersonalizeDirective, { static: true })
   private personalize!: SohoPersonalizeDirective;
+
+  public themeMenuItems!: ThemeMenuItem[];
+  public colorMenuItems!: ColorMenuItem[];
 
   /**
    * Default Theme: this should really be based on the one selected in
