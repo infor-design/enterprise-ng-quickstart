@@ -17,6 +17,30 @@
 <div class="page-container no-scroll">
   <app-header></app-header>
   <div id="maincontent" class="page-container scrollable" role="main">
+    <ids-layout-grid>
+      <ids-text font-size="12" type="h1">Tooltips (when ellipsis text)</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid cols="9" gap="md">
+      <ids-layout-grid-cell>
+        <ids-text overflow="ellipsis" tooltip="true">Some long text that is overflowing and long</ids-text>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
   </div>
 </div>
 <div soho-personalize (changetheme)="onChangeTheme($event)"></div>
