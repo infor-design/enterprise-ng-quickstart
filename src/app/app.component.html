@@ -6,9 +6,7 @@
 <soho-icons-empty *ngIf="!useNewIcons"></soho-icons-empty>
 <soho-icons-empty-new *ngIf="useNewIcons"></soho-icons-empty-new>
 
-
-<nav soho-application-menu class="is-personalizable" [filterable]="true" [openOnLarge]="false"
-  [dismissOnClickMobile]="true" (menuVisibility)="onMenuVisibility($event)">
+<nav soho-application-menu class="is-personalizable" [filterable]="true">
   <div soho-searchfield-wrapper>
     <label class="audible" for="application-menu-searchfield">Search</label>
     <input soho-searchfield id="application-menu-searchfield" [clearable]="true" />
@@ -17,30 +15,6 @@
 <div class="page-container no-scroll">
   <app-header></app-header>
   <div id="maincontent" class="page-container scrollable" role="main">
-    <ids-layout-grid>
-      <ids-text font-size="12" type="h1">Tooltips (when ellipsis text)</ids-text>
-    </ids-layout-grid>
-    <ids-layout-grid cols="9" gap="md">
-      <ids-layout-grid-cell>
-        <ids-text overflow="ellipsis" tooltip="true">Some long text that is overflowing and long</ids-text>
-      </ids-layout-grid-cell>
-      <ids-layout-grid-cell>
-      </ids-layout-grid-cell>
-      <ids-layout-grid-cell>
-      </ids-layout-grid-cell>
-      <ids-layout-grid-cell>
-      </ids-layout-grid-cell>
-      <ids-layout-grid-cell>
-      </ids-layout-grid-cell>
-      <ids-layout-grid-cell>
-      </ids-layout-grid-cell>
-      <ids-layout-grid-cell>
-      </ids-layout-grid-cell>
-      <ids-layout-grid-cell>
-      </ids-layout-grid-cell>
-      <ids-layout-grid-cell>
-      </ids-layout-grid-cell>
-    </ids-layout-grid>
   </div>
 </div>
 <div soho-personalize (changetheme)="onChangeTheme($event)"></div>

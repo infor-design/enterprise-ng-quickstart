@@ -117,7 +117,9 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/d3/dist/d3.js",
-              "./node_modules/ids-enterprise/dist/js/sohoxi.js"
+              "./node_modules/ids-enterprise/dist/js/sohoxi.js",
+              "./node_modules/ids-enterprise-wc/ids-tag/ids-tag.js",
+              "./node_modules/ids-enterprise-wc/ids-text/ids-text.js"
             ]
           }
         },
