@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -28,7 +27,6 @@
     ]
   },
   "angularCompilerOptions": {
-    "allowJs": true,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "enableIvy": true
