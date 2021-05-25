@@ -12,9 +12,6 @@ import {
   SohoApplicationMenuComponent
 } from 'ids-enterprise-ng';
 
-import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
-import IdsText from 'ids-enterprise-wc/ids-text/ids-text.js';
-
 @Component({
   selector: 'body', // eslint-disable-line
   templateUrl: 'app.component.html',
