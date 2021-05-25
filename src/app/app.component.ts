@@ -6,6 +6,12 @@ import {
   AfterViewInit
 } from '@angular/core';
 
+import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import IdsText from 'ids-enterprise-wc/ids-text/ids-text.js';
+import IdsIcon from 'ids-enterprise-wc/ids-icon/ids-icon.js';
+import IdsLayoutGrid from 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
+import IdsContainer from 'ids-enterprise-wc/ids-container/ids-container.js';
+
 import {
   SohoPersonalizeDirective,
   SohoRenderLoopService,
