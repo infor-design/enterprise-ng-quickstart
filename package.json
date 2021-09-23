@@ -23,7 +23,7 @@
     "classlist.js": "^1.1.20150312",
     "ids-enterprise-ng": "^10.6.3",
     "ids-enterprise-wc": "0.0.0-beta.12",
-    "rxjs": "~6.6.7",
+    "rxjs": "~7.3.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
@@ -54,6 +54,6 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.6.0",
-    "typescript": "~4.2.3"
+    "typescript": "~4.3.5"
   }
 }
