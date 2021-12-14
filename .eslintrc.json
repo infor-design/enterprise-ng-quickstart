@@ -21,6 +21,7 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "@typescript-eslint/member-ordering": "off",
         "@angular-eslint/component-selector": [
           "error",
           {
