@@ -6,6 +6,8 @@ import {
   AfterViewInit
 } from '@angular/core';
 
+import 'ids-enterprise-wc/components/ids-text/ids-text';
+
 import {
   SohoPersonalizeDirective,
   SohoRenderLoopService,

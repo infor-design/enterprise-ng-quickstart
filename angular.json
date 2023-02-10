@@ -34,6 +34,11 @@
                 "glob": "**/*",
                 "input": "./node_modules/ids-enterprise/dist/js/cultures",
                 "output": "/assets/ids-enterprise/js/cultures"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ids-enterprise-wc/locale-data",
+                "output": "/locale-data"
               }
             ],
             "styles": [
@@ -42,9 +47,7 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/d3/dist/d3.js",
-              "./node_modules/ids-enterprise/dist/js/sohoxi.js",
-              "./node_modules/ids-enterprise-wc/components/ids-text/ids-text.js",
-              "./node_modules/ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid.js"
+              "./node_modules/ids-enterprise/dist/js/sohoxi.js"
             ]
           },
           "configurations": {
@@ -127,8 +130,6 @@
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/d3/dist/d3.js",
               "./node_modules/ids-enterprise/dist/js/sohoxi.js",
-              "./node_modules/ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid.js",
-              "./node_modules/ids-enterprise-wc/components/ids-text/ids-text.js"
             ]
           }
         },
