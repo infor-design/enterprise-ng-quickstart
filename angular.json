@@ -157,7 +157,6 @@
       }
     }
   },
-  "defaultProject": "ids-enterprise-ng-quickstart",
   "cli": {
     "analytics": "fb234f71-2f18-4d9a-a82d-1e9f0d12493d"
   }
