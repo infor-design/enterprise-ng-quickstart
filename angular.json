@@ -39,6 +39,11 @@
                 "glob": "**/*",
                 "input": "./node_modules/ids-enterprise-wc/locale-data",
                 "output": "/locale-data"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ids-enterprise-wc/themes",
+                "output": "themes"
               }
             ],
             "styles": [
