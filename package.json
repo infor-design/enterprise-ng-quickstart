@@ -7,7 +7,7 @@
     "start": "ng serve --open=true",
     "build": "ng build",
     "e2e": "ng e2e",
-    "bundle-report": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build --configuration=production --stats-json && webpack-bundle-analyzer dist/ids-enterprise-ng-quickstart/stats.json --port auto"
+    "build:stats": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build --configuration=production --stats-json && webpack-bundle-analyzer dist/ids-enterprise-ng-quickstart/stats.json --port auto"
   },
   "private": true,
   "dependencies": {
