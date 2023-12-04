@@ -1,6 +1,6 @@
 {
   "name": "ids-enterprise-ng-quickstart",
-  "version": "14.7.0",
+  "version": "17.0.1",
   "author": "Infor Design",
   "scripts": {
     "ng": "ng",
