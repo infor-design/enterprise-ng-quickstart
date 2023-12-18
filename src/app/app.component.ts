@@ -11,16 +11,34 @@ import 'ids-enterprise-wc/components/ids-text/ids-text';
 import {
   SohoPersonalizeDirective,
   SohoRenderLoopService,
-  SohoApplicationMenuComponent
+  SohoApplicationMenuComponent,
+  SohoAccordionComponent,
+  SohoSearchFieldComponent,
+  SohoModuleNavSwitcherComponent,
+  SohoModuleNavSettingsComponent
 } from 'ids-enterprise-ng';
+
+const defaultRoles: Array<SohoModuleNavSwitcherRoleRecord> = [
+  { text: 'Admin', value: 'admin', icon: 'app-ac' },
+  { text: 'Job Console', value: 'job-console', icon: 'app-jo' },
+  { text: 'Landing Page Designer', value: 'landing-page-designer', icon: 'app-ssm' },
+  { text: 'Process Server Admin', value: 'process-server-admin', icon: 'app-um' },
+  { text: 'Proxy Management', value: 'proxy-management', icon: 'app-pm' },
+  { text: 'Security System Management', value: 'security-system-management', icon: 'app-psa' },
+  { text: 'User Management', value: 'user-management', icon: 'app-lmd' }
+];
 
 @Component({
   selector: 'body', // eslint-disable-line
   templateUrl: 'app.component.html',
-  styleUrls: [ './app.component.css' ],
+  styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewInit {
+  @ViewChild(SohoAccordionComponent) accordion!: SohoAccordionComponent;
+  @ViewChild(SohoSearchFieldComponent) searchfield?: SohoSearchFieldComponent;
+  @ViewChild(SohoModuleNavSwitcherComponent) moduleNavSwitcher?: SohoModuleNavSwitcherComponent;
+  @ViewChild(SohoModuleNavSettingsComponent) moduleNavSettings?: SohoModuleNavSettingsComponent;
 
   /**
    * Local Storage Key
@@ -49,29 +67,13 @@ export class AppComponent implements AfterViewInit {
     this.renderLoop.start();
   }
 
+  public model = {
+    selectedRole: 'admin',
+    roles: defaultRoles
+  }
+
   ngAfterViewInit(): void {
-
-    /**
-     * Note: If using an input like [triggers]="[ '.application-menu-trigger' ]"
-     * hookup the app menu trigger once the afterViewInit is called. This will
-     * ensure that the toolbar has had a chance to create the application-menu-trugger
-     * button.
-     * this.applicationMenu.triggers = [ '.application-menu-trigger' ];
-     */
-    if (this.isApplicationMenuOpen) {
-      this.applicationMenu.openMenu(true, true);
-    } else {
-      this.applicationMenu.closeMenu();
-    }
-  }
-
-  public get isApplicationMenuOpen(): boolean {
-    const valueString = localStorage.getItem(AppComponent.isMenuOpen);
-    return valueString ? (valueString === 'true') : true;
-  }
-
-  public set isApplicationMenuOpen(open: boolean) {
-    localStorage.setItem(AppComponent.isMenuOpen, open ? 'true' : 'false');
+    this.moduleNavSwitcher?.setRoles(this.model.roles);
   }
 
   onChangeTheme(ev: SohoPersonalizeEvent) {
@@ -81,11 +83,5 @@ export class AppComponent implements AfterViewInit {
       || ev.data.theme === 'theme-new-light'
       || ev.data.theme === 'theme-new-dark'
       || ev.data.theme === 'theme-new-contrast';
-  }
-
-  public onMenuVisibility(visible: boolean): void {
-    if (this.isApplicationMenuOpen !== visible) {
-      this.isApplicationMenuOpen = visible;
-    }
   }
 }
