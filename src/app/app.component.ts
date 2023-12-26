@@ -15,7 +15,8 @@ import {
   SohoAccordionComponent,
   SohoSearchFieldComponent,
   SohoModuleNavSwitcherComponent,
-  SohoModuleNavSettingsComponent
+  SohoModuleNavSettingsComponent,
+  SohoModuleNavComponent
 } from 'ids-enterprise-ng';
 
 const defaultRoles: Array<SohoModuleNavSwitcherRoleRecord> = [
@@ -39,6 +40,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild(SohoSearchFieldComponent) searchfield?: SohoSearchFieldComponent;
   @ViewChild(SohoModuleNavSwitcherComponent) moduleNavSwitcher?: SohoModuleNavSwitcherComponent;
   @ViewChild(SohoModuleNavSettingsComponent) moduleNavSettings?: SohoModuleNavSettingsComponent;
+  @ViewChild(SohoModuleNavComponent) moduleNav?: SohoModuleNavComponent;
 
   /**
    * Local Storage Key
@@ -74,6 +76,13 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.moduleNavSwitcher?.setRoles(this.model.roles);
+  }
+
+  toggleModuleNavDisplayMode() {
+    console.log(this.moduleNav);
+    // if (!this.moduleNavContainer) return;
+    // const isCurrentlyCollapsed = this.moduleNavDisplayMode === 'collapsed';
+    // this.moduleNavDisplayMode = isCurrentlyCollapsed ? 'expanded' : 'collapsed';
   }
 
   onChangeTheme(ev: SohoPersonalizeEvent) {
