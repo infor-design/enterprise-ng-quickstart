@@ -9,7 +9,7 @@
 <soho-module-nav-container [ngClass]="{ 'module-nav-container': true }">
   <soho-module-nav #moduleNav [ngClass]="{ 'module-nav': true }"
     [accordionSettings]="{ 'rerouteOnLinkClick': false, 'expanderDisplay': 'classic' }" [displayMode]="'collapsed'"
-    [filterable]="true" [pinSections]="true" (appMenuTriggerClick)="toggleModuleNavDisplayMode()">
+    [filterable]="true" [pinSections]="true" (hamburgerClick)="toggleModuleNavDisplayMode()">
 
     <div class="module-nav-bar">
       <soho-accordion [allowOnePane]="true" [hasPanels]="true" [moduleNav]="true" [rerouteOnLinkClick]="false">

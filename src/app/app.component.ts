@@ -36,19 +36,15 @@ const defaultRoles: Array<SohoModuleNavSwitcherRoleRecord> = [
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChild(SohoAccordionComponent) accordion!: SohoAccordionComponent;
-  @ViewChild(SohoSearchFieldComponent) searchfield?: SohoSearchFieldComponent;
   @ViewChild(SohoModuleNavSwitcherComponent) moduleNavSwitcher?: SohoModuleNavSwitcherComponent;
-  @ViewChild(SohoModuleNavSettingsComponent) moduleNavSettings?: SohoModuleNavSettingsComponent;
-  @ViewChild(SohoModuleNavComponent) moduleNav?: SohoModuleNavComponent;
 
   /**
    * Local Storage Key
    */
   private static isMenuOpen = 'is-application-menu-open';
 
-  @ViewChild(SohoApplicationMenuComponent, { static: true })
-  public applicationMenu!: SohoApplicationMenuComponent;
+  @ViewChild(SohoModuleNavComponent, { static: true })
+  public moduleNav!: SohoModuleNavComponent;
 
   @ViewChild(SohoPersonalizeDirective, { static: true }) personalize?: SohoPersonalizeDirective;
 
