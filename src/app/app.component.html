@@ -6,10 +6,16 @@
 <soho-icons-empty *ngIf="!useNewIcons"></soho-icons-empty>
 <soho-icons-empty-new *ngIf="useNewIcons"></soho-icons-empty-new>
 
-<soho-module-nav-container [ngClass]="{ 'module-nav-container': true }">
-  <soho-module-nav #moduleNav [ngClass]="{ 'module-nav': true }"
-    [accordionSettings]="{ 'rerouteOnLinkClick': false, 'expanderDisplay': 'classic' }" [displayMode]="'collapsed'"
-    [filterable]="true" [pinSections]="true" (hamburgerClick)="toggleModuleNavDisplayMode()">
+<soho-module-nav-container
+  #moduleNavContainer
+  [ngClass]="{ 'module-nav-container': true }">
+  <soho-module-nav
+    #moduleNav
+    [ngClass]="{ 'module-nav': true }"
+    [accordionSettings]="{ 'rerouteOnLinkClick': false, 'expanderDisplay': 'classic' }"
+    [displayMode]="this.model.displayMode"
+    [filterable]="true"
+    [pinSections]="true">
 
     <div class="module-nav-bar">
       <soho-accordion [allowOnePane]="true" [hasPanels]="true" [moduleNav]="true" [rerouteOnLinkClick]="false">
@@ -149,7 +155,9 @@
     </div>
   </soho-module-nav>
   <div class="page-container no-scroll has-module-nav-offset">
-    <app-header></app-header>
+    <app-header
+      #appHeader
+      (hamburgerClick)="toggleModuleNavDisplayMode($event)"></app-header>
     <!--<router-outlet></router-outlet>-->
   </div>
 </soho-module-nav-container>

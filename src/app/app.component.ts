@@ -14,6 +14,7 @@ import {
   SohoApplicationMenuComponent,
   SohoAccordionComponent,
   SohoSearchFieldComponent,
+  SohoModuleNavContainerComponent,
   SohoModuleNavSwitcherComponent,
   SohoModuleNavSettingsComponent,
   SohoModuleNavComponent
@@ -37,6 +38,7 @@ const defaultRoles: Array<SohoModuleNavSwitcherRoleRecord> = [
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild(SohoModuleNavSwitcherComponent) moduleNavSwitcher?: SohoModuleNavSwitcherComponent;
+  @ViewChild(SohoModuleNavContainerComponent) moduleNavContainer?: SohoModuleNavContainerComponent;
 
   /**
    * Local Storage Key
@@ -66,6 +68,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   public model = {
+    displayMode: 'collapsed',
     selectedRole: 'admin',
     roles: defaultRoles
   }
@@ -74,11 +77,12 @@ export class AppComponent implements AfterViewInit {
     this.moduleNavSwitcher?.setRoles(this.model.roles);
   }
 
-  toggleModuleNavDisplayMode() {
-    console.log(this.moduleNav);
-    // if (!this.moduleNavContainer) return;
-    // const isCurrentlyCollapsed = this.moduleNavDisplayMode === 'collapsed';
-    // this.moduleNavDisplayMode = isCurrentlyCollapsed ? 'expanded' : 'collapsed';
+  toggleModuleNavDisplayMode(e: MouseEvent) {
+    if (!this.moduleNavContainer) return;
+
+    console.info('hamburgerClick event: ', this.moduleNav);
+    const isCurrentlyCollapsed = this.model.displayMode === 'collapsed';
+    this.model.displayMode = isCurrentlyCollapsed ? 'expanded' : 'collapsed';
   }
 
   onChangeTheme(ev: SohoPersonalizeEvent) {

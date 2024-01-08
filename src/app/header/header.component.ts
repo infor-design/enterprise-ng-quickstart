@@ -15,9 +15,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Output() hamburgerClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() hamburgerClick: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
-  toggleModuleNav() {
-    this.hamburgerClick.emit(true);
+  toggleModuleNav(e: MouseEvent) {
+    console.info('click event')
+    this.hamburgerClick.next(e);
   }
 }
