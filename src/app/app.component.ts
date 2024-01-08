@@ -80,16 +80,12 @@ export class AppComponent implements AfterViewInit {
   toggleModuleNavDisplayMode(e: MouseEvent) {
     if (!this.moduleNavContainer) return;
 
-    console.info('hamburgerClick event: ', this.moduleNav);
     const isCurrentlyCollapsed = this.model.displayMode === 'collapsed';
     this.model.displayMode = isCurrentlyCollapsed ? 'expanded' : 'collapsed';
   }
 
   onChangeTheme(ev: SohoPersonalizeEvent) {
-    this.useNewIcons = ev.data.theme === 'theme-uplift-light'
-      || ev.data.theme === 'theme-uplift-dark'
-      || ev.data.theme === 'theme-uplift-contrast'
-      || ev.data.theme === 'theme-new-light'
+    this.useNewIcons = ev.data.theme === 'theme-new-light'
       || ev.data.theme === 'theme-new-dark'
       || ev.data.theme === 'theme-new-contrast';
   }

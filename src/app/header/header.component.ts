@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
   @Output() hamburgerClick: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
   toggleModuleNav(e: MouseEvent) {
-    console.info('click event')
     this.hamburgerClick.next(e);
   }
 }
