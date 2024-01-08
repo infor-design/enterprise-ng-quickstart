@@ -6,36 +6,159 @@
 <soho-icons-empty *ngIf="!useNewIcons"></soho-icons-empty>
 <soho-icons-empty-new *ngIf="useNewIcons"></soho-icons-empty-new>
 
-<app-masthead-demo></app-masthead-demo>
+<soho-module-nav-container
+  #moduleNavContainer
+  [ngClass]="{ 'module-nav-container': true }">
+  <soho-module-nav
+    #moduleNav
+    [ngClass]="{ 'module-nav': true }"
+    [accordionSettings]="{ 'rerouteOnLinkClick': false, 'expanderDisplay': 'classic' }"
+    [displayMode]="this.model.displayMode"
+    [filterable]="true"
+    [pinSections]="true">
 
-<nav soho-application-menu class="is-personalizable" [filterable]="true" [openOnLarge]="false"
-  [dismissOnClickMobile]="true" (menuVisibility)="onMenuVisibility($event)">
-  <div soho-searchfield-wrapper>
-    <label class="audible" for="application-menu-searchfield">Search</label>
-    <input soho-searchfield id="application-menu-searchfield" [clearable]="true" />
-  </div>
-  <application-menu-demo>
-    <!--
-    <div class="accordion panel inverse" data-options="{'allowOnePane': true}">
-      <div class="accordion-header">
-        <a href="#"><span>Option One</span></a>
-      </div>
-      <div class="accordion-header">
-        <a href="#"><span>Option Two</span></a>
-      </div>
+    <div class="module-nav-bar">
+      <soho-accordion [allowOnePane]="true" [hasPanels]="true" [moduleNav]="true" [rerouteOnLinkClick]="false">
+        <div class="module-nav-search-container accordion-section">
+          <label for="module-nav-searchfield" class="audible">Search</label>
+          <input soho-searchfield id="module-nav-searchfield" name="module-nav-searchfield" placeholder="Search"
+            [ngClass]="{
+              'searchfield': true,
+              'module-nav-search': true
+            }" />
+        </div>
+
+        <div class="module-nav-main accordion-section">
+          <div class="accordion-header">
+            <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+              <use href="#icon-folder"></use>
+            </svg>
+            <a href="#"><span>Folder One</span></a>
+          </div>
+          <div class="accordion-pane">
+            <div class="accordion-header"><a><span>Item One</span></a></div>
+            <div class="accordion-header"><a><span>Item Two</span></a></div>
+          </div>
+
+          <div class="accordion-header">
+            <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+              <use href="#icon-folder"></use>
+            </svg>
+            <a href="#"><span>Folder Two</span></a>
+          </div>
+          <div class="accordion-pane">
+            <div class="accordion-header"><a><span>Item One</span></a></div>
+            <div class="accordion-header"><a><span>Item Two</span></a></div>
+          </div>
+
+        </div>
+
+        <div class="module-nav-settings accordion-section">
+          <soho-module-nav-settings>
+            <div soho-menu-button id="module-nav-settings-btn" class="module-nav-settings-btn accordion-header"
+              [icon]="'settings'" [hideMenuArrow]="true" [showArrow]="false" [offset]="{ 'y': 8 }" [returnFocus]="true"
+              [ripple]="false" [menu]="'module-nav-settings-menu'">
+              <a href="#"><span>Settings</span></a>
+            </div>
+            <ul soho-popupmenu id="module-nav-settings-menu" class="popupmenu module-nav-settings-menu">
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+                    <use href="#icon-observation-precautions"></use>
+                  </svg>
+                  <span>Jobs</span>
+                </a>
+              </li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+                    <use href="#icon-report"></use>
+                  </svg>
+                  <span>Reports</span>
+                </a>
+              </li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+                    <use href="#icon-isolation"></use>
+                  </svg>
+                  <span>Actions</span>
+                </a>
+              </li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+                    <use href="#icon-edit"></use>
+                  </svg>
+                  <span>Personalization</span>
+                </a>
+              </li>
+              <li soho-popupmenu-separator class="separator"></li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <span>Create Report</span>
+                </a>
+              </li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <span>Proxy</span>
+                </a>
+              </li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <span>Set "As Of Date"</span>
+                </a>
+              </li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <span>User Context</span>
+                </a>
+              </li>
+              <li soho-popupmenu-separator class="separator"></li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+                    <use href="#icon-settings"></use>
+                  </svg>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+                    <use href="#icon-info"></use>
+                  </svg>
+                  <span>About</span>
+                </a>
+              </li>
+              <li soho-popupmenu-item>
+                <a soho-popupmenu-label href="#">
+                  <svg class="icon" focusable="false" aria-hidden="true" role="presentation">
+                    <use href="#icon-help"></use>
+                  </svg>
+                  <span>Help</span>
+                </a>
+              </li>
+              <li soho-popupmenu-separator class="separator"></li>
+              <li soho-popupmenu-item>
+                <a id="toggle-custom-roles" soho-popupmenu-label href="#">
+                  <span>Toggle Custom Roles</span>
+                </a>
+              </li>
+            </ul>
+          </soho-module-nav-settings>
+        </div>
+
+      </soho-accordion>
     </div>
-    -->
-  </application-menu-demo>
-</nav>
-<div class="page-container no-scroll">
-  <app-header></app-header>
-  <div id="maincontent" class="page-container scrollable" role="main">
+    <div class="module-nav-detail">
+    </div>
+  </soho-module-nav>
+  <div class="page-container no-scroll has-module-nav-offset">
+    <app-header
+      #appHeader
+      (hamburgerClick)="toggleModuleNavDisplayMode($event)"></app-header>
     <!--<router-outlet></router-outlet>-->
-    <ids-layout-grid auto="true">
-      <ids-layout-grid-cell>
-        <ids-text font-size="12" type="h1">New Web Components Work Too</ids-text>
-      </ids-layout-grid-cell>
-      </ids-layout-grid>
   </div>
-</div>
+</soho-module-nav-container>
 <div soho-personalize (changetheme)="onChangeTheme($event)"></div>

@@ -1,4 +1,5 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostBinding, OnInit, Output, ViewChild } from '@angular/core';
+import { SohoModuleNavComponent } from 'ids-enterprise-ng';
 
 @Component({
   selector: 'app-header',
@@ -14,4 +15,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Output() hamburgerClick: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
+
+  toggleModuleNav(e: MouseEvent) {
+    this.hamburgerClick.next(e);
+  }
 }
