@@ -19,7 +19,7 @@
     "@angular/platform-browser": "~17.2.3",
     "@angular/platform-browser-dynamic": "~17.2.3",
     "@angular/router": "17.2.3",
-    "ids-enterprise-ng": "17.5.5",
+    "ids-enterprise-ng": "17.5.9",
     "ids-enterprise-wc": "1.0.0-beta.21",
     "tslib": "^2.6.2",
     "zone.js": "~0.14.4"
