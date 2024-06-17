@@ -1,6 +1,6 @@
 {
   "name": "ids-enterprise-ng-quickstart",
-  "version": "17.6.0",
+  "version": "18.0.2",
   "author": "Infor Design",
   "scripts": {
     "ng": "ng",
@@ -11,7 +11,7 @@
   },
   "private": true,
   "peerDependencies": {
-    "ids-enterprise-ng": "18.0.1",
+    "ids-enterprise-ng": "18.0.2",
     "ids-enterprise-wc": "1.2.0"
   },
   "dependencies": {

@@ -89,4 +89,12 @@ export class AppComponent implements AfterViewInit {
       || ev.data.theme === 'theme-new-dark'
       || ev.data.theme === 'theme-new-contrast';
   }
+
+  afterRemove(ev: any) {
+    console.log('afterRemove', ev);
+  }
+
+  onClick(ev: any) {
+    console.log('onClick', ev);
+  }
 }
