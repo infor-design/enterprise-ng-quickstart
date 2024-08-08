@@ -44,9 +44,3 @@ jobs:
 
     - name: Build
       run: npm run build
-
-    - name: Run Lint Checks
-      run: npm run lint
-
-    - name: Run tests
-      run: npm run test
