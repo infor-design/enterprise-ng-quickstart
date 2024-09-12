@@ -13,9 +13,8 @@
     "target": "ES2022",
     "strict": true,
     "skipLibCheck": true,
-    "types": [
-      "ids-enterprise-typings",
-      "node"
+    "typeRoots": [
+      "node_modules/@types"
     ],
     "lib": [
       "es2018",
