@@ -4,7 +4,8 @@
     "outDir": "./out-tsc/app",
     "types": [
       "jquery",
-      "node"
+      "node",
+      "../ids-enterprise-typings"
     ]
   },
   "files": [
