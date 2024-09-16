@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> This repo has been moved to [Oxford/Gitlab](https://oxford.awsdev.infor.com/infor-design/enterprise-ng)
+> This repo has been moved to [Oxford/Gitlab]([https://oxford.awsdev.infor.com/infor-design/enterprise-ng](https://oxford.awsdev.infor.com/infor-design/enterprise-ng-quickstart))
 >
 
 # Ids Enterprise Ng Quickstart
