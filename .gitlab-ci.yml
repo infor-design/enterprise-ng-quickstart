@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build:
+  stage: build
+  tags:
+    - dsa
+    - DIND
+  image: node:20
+  script:
+    - npm ci
+    - npm run build
