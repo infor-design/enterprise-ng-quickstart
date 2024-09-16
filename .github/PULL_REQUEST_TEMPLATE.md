@@ -4,10 +4,10 @@ Example: When "Adding a function to do X",
 explain why it is necessary to have a way to do X.
 -->
 
-**Related github/jira issue (required)**:
+**Related Jira issue (required)**:
 <!--
 Provide a link to the related issue(s) to this Pull Request;
-auto-closing github issues if necessary (example: "Closes #100")
+auto-closing Jira issues if necessary (example: "Closes <link to Jira issue>").
 -->
 
 **Steps necessary to review your pull request (required)**:
