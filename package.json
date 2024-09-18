@@ -11,10 +11,6 @@
   },
   "private": true,
   "peerDependencies": {
-    "ids-enterprise-ng": "18.3.2",
-    "ids-enterprise-wc": "1.4.0"
-  },
-  "dependencies": {
     "@angular/animations": "~18.2.4",
     "@angular/common": "~18.2.4",
     "@angular/compiler": "~18.2.4",
@@ -24,7 +20,9 @@
     "@angular/platform-browser-dynamic": "~18.2.4",
     "@angular/router": "18.2.4",
     "tslib": "^2.6.2",
-    "zone.js": "~0.14.10"
+    "zone.js": "~0.14.10",
+    "ids-enterprise-ng": "18.3.2",
+    "ids-enterprise-wc": "1.4.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~18.2.4",
