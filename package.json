@@ -36,6 +36,7 @@
     "@types/node": "^20.11.24",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "6.13.2",
+    "ids-enterprise-typings": "18.3.3",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsdoc": "^46.9.0",
