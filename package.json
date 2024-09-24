@@ -21,7 +21,7 @@
     "@angular/router": "18.2.5",
     "tslib": "^2.6.2",
     "zone.js": "~0.14.10",
-    "ids-enterprise-ng": "18.3.3",
+    "ids-enterprise-ng": "18.5.1",
     "ids-enterprise-wc": "1.5.0"
   },
   "devDependencies": {
@@ -36,7 +36,7 @@
     "@types/node": "^20.11.24",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "6.13.2",
-    "ids-enterprise-typings": "18.3.3",
+    "ids-enterprise-typings": "18.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsdoc": "^46.9.0",
